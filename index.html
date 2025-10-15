@@ -1,0 +1,152 @@
+<!doctype html>
+<html lang="uk">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Барбер на дім</title>
+  <meta name="description" content="Професійна чоловіча стрижка на дому в Києві. Виїзд до клієнтів, включно з людьми похилого віку та людьми з інвалідністю. Зручно, акуратно, з повагою та досвідом понад 10 років." />
+  <meta name="keywords" content="барбер на дому, чоловіча стрижка Київ, барбер виїзд, барбер вдома, стрижка бороди Київ, стрижка похилих людей, стрижка людей з інвалідністю, чоловічий барбер Київ, стрижка вдома Київ" />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg:#e9e6e2; /* warm gray base */
+      --card:#ffffff;
+      --accent:#2b2b2b;
+      --muted:#6b6b6b;
+      --button:#111111;
+    }
+    html,body{height:100%;margin:0;font-family:'Poppins', 'Montserrat', sans-serif;background:var(--bg);color:var(--accent);}
+    .hero{position:relative;min-height:100vh;display:flex;align-items:center;justify-content:center;overflow:hidden;}
+    .slider{position:absolute;inset:0;display:block;}
+    .slide{position:absolute;inset:0;background-size:cover;background-position:center;filter:brightness(0.55);transition:opacity 1s ease;opacity:0;}
+    .slide.show{opacity:1;}
+    .container{position:relative;z-index:5;max-width:1000px;padding:48px;text-align:left;}
+    h1{font-size:36px;margin:0 0 8px;font-weight:700;}
+    p.lead{font-size:18px;margin:0 0 18px;color:var(--muted);}
+    .cta{display:inline-block;background:var(--button);color:#fff;padding:14px 20px;border-radius:8px;text-decoration:none;font-weight:600;}
+    .grid{display:grid;grid-template-columns:1fr;gap:18px;margin-top:28px;}
+    .card{background:rgba(255,255,255,0.85);backdrop-filter:blur(4px);padding:18px;border-radius:12px;box-shadow:0 6px 18px rgba(0,0,0,0.06);}
+    .services ul{margin:8px 0 0;padding-left:18px;}
+    footer{padding:28px;text-align:center;color:var(--muted);}
+    nav.topbar{position:fixed;top:16px;left:50%;transform:translateX(-50%);z-index:10;}
+    .badge{background:rgba(255,255,255,0.9);padding:8px 12px;border-radius:999px;font-weight:600;box-shadow:0 4px 12px rgba(0,0,0,0.06);}
+    @media(min-width:800px){
+      .grid{grid-template-columns:1fr 1fr;}
+      h1{font-size:44px;}
+    }
+  </style>
+
+    <style>
+    body {
+        background: url('background_collage.jpg') no-repeat center center fixed;
+        background-size: cover;
+        position: relative;
+    }
+    body::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.4);
+        z-index: -1;
+    }
+    </style>
+    
+</head>
+<body>
+  <nav class="topbar"><div class="badge">Барбер на дім</div></nav>
+
+  <section class="hero" id="home">
+    <div class="slider" id="slider">
+      <!-- slides injected by script -->
+    </div>
+
+    <div class="container">
+      <h1>Барбер на дім</h1>
+      <p class="lead">Чоловіча стрижка на дому в Києві — професійно, зручно, доступно</p>
+      <a class="cta" href="https://t.me/cutbooster" target="_blank" rel="noopener noreferrer">Записатись у Telegram</a>
+
+      <div class="grid" style="margin-top:28px;">
+        <div class="card about">
+          <h3>Про мене</h3>
+          <p>Мене звати <strong>Володимир Маліванченко</strong>. Я барбер із досвідом понад 10 років, учасник професійних конкурсів. Працюю з чоловіками будь-якого віку, у тому числі з літніми клієнтами — з повагою, терпінням і комфортом.</p>
+        </div>
+        <div class="card services">
+          <h3>Послуги</h3>
+          <ul>
+            <li>Чоловіча стрижка</li>
+            <li>Дитяча стрижка</li>
+            <li>Стрижка бороди</li>
+            <li>Виїзд додому по Києву</li>
+            <li><em>Індивідуальний підхід до кожного клієнта</em></li>
+          </ul>
+        </div>
+
+        <div class="card discounts">
+          <h3>Знижки</h3>
+          <p>🎁 Для пенсіонерів — знижки до  та людей з інвалідністю<strong>50%</strong>.</p>
+        </div>
+        <div class="card contacts">
+          <h3>Контакти</h3>
+          <p>📱 Telegram — <a href="https://t.me/cutbooster" target="_blank">cutbooster</a><br>📞 Телефон — <strong>093 227 35 88</strong><br>📍 Київ</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <small>© Володимир Маліванченко — Барбер на дім</small><br>
+    <small>SEO: стрижка похилих людей; стрижка людей з інвалідністю</small>
+  </footer>
+
+  <script>
+    // Prepare slide images dynamically from assets/images folder
+    const images = [];
+    for (let i=1;i<=20;i++) {
+      images.push('assets/images/photo_' + i + '.jpg');
+      images.push('assets/images/photo_' + i + '.jpeg');
+      images.push('assets/images/photo_' + i + '.png');
+      images.push('assets/images/photo_' + i + '.webp');
+    }
+
+    const slider = document.getElementById('slider');
+    let validImgs = [];
+
+    function checkNext(idx){
+      if(idx>=images.length){ startSlider(); return; }
+      const src = images[idx];
+      const img = new Image();
+      img.onload = function(){ validImgs.push(src); checkNext(idx+1); }
+      img.onerror = function(){ checkNext(idx+1); }
+      img.src = src;
+    }
+    checkNext(0);
+
+    function startSlider(){
+      if(validImgs.length===0){
+        const s = document.createElement('div');
+        s.className='slide show';
+        s.style.backgroundColor='#cfcac6';
+        slider.appendChild(s);
+        return;
+      }
+      validImgs = Array.from(new Set(validImgs)); // unique
+      validImgs.forEach((src,i)=>{
+        const s = document.createElement('div');
+        s.className='slide' + (i===0?' show':'');
+        s.style.backgroundImage = "url('" + src + "')";
+        slider.appendChild(s);
+      });
+      let idx=0;
+      setInterval(()=>{
+        const slides = document.querySelectorAll('.slide');
+        slides[idx].classList.remove('show');
+        idx = (idx+1)%slides.length;
+        slides[idx].classList.add('show');
+      },4000);
+    }
+  </script>
+</body>
+</html>
